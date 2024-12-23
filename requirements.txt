@@ -1,0 +1,3 @@
+Openai
+langchain
+Streamlit

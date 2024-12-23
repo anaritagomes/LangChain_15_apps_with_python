@@ -11,3 +11,4 @@ our_query = "What is the current president of the USA?"
 
 #Last week langchain has recommended to use invoke function for the below please :)
 completion = llm.invoke(our_query)
+print(completion)

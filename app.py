@@ -4,9 +4,11 @@ import os
 
 api_token = os.getenv("HUGGINGFACEHUB_API_TOKEN")
 
-llm = HuggingFaceEndpoint(
-    repo_id="mistralai/Mistral-7B-Instruct-v0.2") # Model link : https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2
-
+def load_answer(question):
+    llm = HuggingFaceEndpoint(repo_id="mistralai/Mistral-7B-Instruct-v0.2") # Model link : https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2
+    answer=llm.invoke(question)
+    return answer
+    
 # The LLM takes a prompt as an input and outputs a completion
 our_query = "What is the current president of the USA?"
 

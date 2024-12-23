@@ -32,4 +32,5 @@ submit = st.button('Generate')
 # If generate button is clicked
 if submit:
     st.subheader("Answer:")
-    st.text_area("Response:", formatted_response, height=300)
+    # Use st.write for better handling of long text
+    st.write(formatted_response)

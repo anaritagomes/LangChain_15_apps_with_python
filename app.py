@@ -32,5 +32,8 @@ submit = st.button('Generate')
 # If generate button is clicked
 if submit:
     st.subheader("Answer:")
-    # Use st.write for better handling of long text
-    st.write(formatted_response)
+    # Use st.text() with enough space to handle the large response
+    st.text(formatted_response)  # This method ensures plain text formatting and does not cut off
+    
+    # Optionally: Use a larger container with st.markdown
+    st.markdown(f"<div style='white-space: pre-wrap; word-wrap: break-word; width: 100%;'>{formatted_response}</div>", unsafe_allow_html=True)

@@ -23,11 +23,11 @@ def get_text():
 user_input=get_text()
 response = load_answer(user_input)
 
+formatted_response = response.strip()  # Removes extra spaces or line breaks
+    
 submit = st.button('Generate')  
 
 #If generate button is clicked
 if submit:
-
     st.subheader("Answer:")
-
-    st.write(response)
+    st.text_area("Response:", formatted_response, height=300)

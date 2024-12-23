@@ -1,8 +1,7 @@
 import streamlit as st
 from langchain_openai import OpenAI
 
-#import os
-#os.environ["OPENAI_API_KEY"] = ""
+api_token = os.getenv("HUGGINGFACEHUB_API_TOKEN")
 
 def load_answer(question):
     llm = OpenAI(model_name="gpt-3.5-turbo-instruct",temperature=0)

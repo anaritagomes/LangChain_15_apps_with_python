@@ -1,5 +1,6 @@
 import streamlit as st
 from langchain.llms import HuggingFaceEndpoint
+import os 
 
 api_token = os.getenv("HUGGINGFACEHUB_API_TOKEN")
 

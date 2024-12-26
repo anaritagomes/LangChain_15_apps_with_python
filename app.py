@@ -10,6 +10,7 @@ def load_answer(question):
         return "Please enter a question."
     llm = HuggingFaceEndpoint(
         repo_id="mistralai/Mistral-7B-Instruct-v0.2")  # Model link: https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2
+    temperature = 0.7  # Lower values make responses more deterministic
     answer = llm.invoke(question)
     return answer
 

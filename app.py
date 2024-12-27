@@ -16,8 +16,8 @@ def load_answer(question):
 
 
 # App UI starts here
-st.set_page_config(page_title="LangChain Demo", page_icon=":robot:")
-st.header("LangChain Demo")
+st.set_page_config(page_title="Simple LangChain Q&A App", page_icon=":robot:")
+st.header("Simple LangChain Q&A App")
 
 
 # Gets the user input
